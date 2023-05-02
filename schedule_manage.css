@@ -1,0 +1,24 @@
+.schedule-table {
+    border-collapse: collapse;
+    width: 100%;
+    
+}
+
+.schedule-table tbody {
+    width: auto;
+    margin: 10px;
+}
+
+.schedule-table th, td{
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+.top-row th{
+    background-color: lightgreen;
+}
+
+.date-column {
+    background-color: lightgoldenrodyellow;
+}
