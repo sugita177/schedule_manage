@@ -1,3 +1,13 @@
+.submit-div {
+    text-align: right;
+    margin: 10px;
+}
+
+.submit-div input {
+    box-sizing: border-box;
+    width: 10%;
+}
+
 .schedule-table {
     border-collapse: collapse;
     width: 100%;
@@ -21,4 +31,15 @@
 
 .date-column {
     background-color: lightgoldenrodyellow;
+}
+
+.schedule-table td input {
+    width: 100%;
+    box-sizing:border-box;
+    height: 100%;
+    font-size: 100%;
+}
+
+.schedule-table td {
+    height: 30px;
 }
