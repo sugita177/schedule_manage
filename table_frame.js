@@ -29,7 +29,7 @@ export class TableFrame {
         topTableRow.className = 'top-row';
         const tableHeadElement = document.createElement('th');
         const leftTopIndex = topTableRow.appendChild(tableHeadElement);
-        leftTopIndex.textContent = '日付';
+        leftTopIndex.textContent = `${this.#year}年${this.#month+1}月`;
         for(let j=0; j<this.#member_num; j++) {
             const tableHeadElement = document.createElement('th');
             const memberIndex = topTableRow.appendChild(tableHeadElement);
