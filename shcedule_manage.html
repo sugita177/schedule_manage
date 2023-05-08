@@ -7,8 +7,12 @@
     </head>
     <body>
         <h2>スケジュール管理</h2>
-        <div class="submit-div"><input type="button" value="データ編集"></div>
-        <div class="year-month" id="yearMonth"></div>
+        <div class="edit-div"><input type="button" value="データ編集"></div>
+        <div class="input-year-month-div">
+            <select id="selectYear"></select>年
+            <select id="selectMonth"></select>月
+            <input type="button" value="年月変更">
+        </div>
         <table class="schedule-table">
             <colgroup>
                 <col span="1" class="date-column">

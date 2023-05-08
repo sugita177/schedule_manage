@@ -1,13 +1,13 @@
-.year-month {
-    text-align: left;
+.input-year-month-div {
+    margin: 10px;
 }
 
-.submit-div {
+.edit-div {
     text-align: right;
     margin: 10px;
 }
 
-.submit-div input {
+.edit-div input {
     box-sizing: border-box;
     width: 10%;
 }
