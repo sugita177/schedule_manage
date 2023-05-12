@@ -106,16 +106,29 @@ function createFrame(year, month, memberNum) {
         for(let j=0; j<memberNum; j++) {
             const tableDataElement = document.createElement('td');
             const tableData = tableRow.appendChild(tableDataElement);
-            const inputElement = document.createElement('input');
-            inputElement.type = 'text';
-            tableData.appendChild(inputElement);
-            //inputElement.disabled = true;
+            tableData.textContent = `${i+1}-${j+1}`;
+            tableData.id = `datumMember${j}Date${year}${month+1}${i+1}`;
+            const editButton = document.createElement('button');
+            editButton.textContent = '編集';
+            tableData.appendChild(editButton);
         }
-    } 
+    }
+
+    for(let i=0; i<maxDate; i++) {
+        for(let j=0; j<memberNum; j++) {
+            const textEditButton = document.querySelector(`#datumMember${j}Date${year}${month+1}${i+1} button`);
+            textEditButton.addEventListener('click', openTextEdit);
+        }
+    }
+
 }
 
 function submitYearMonth() {
     const selectedYearValue = parseInt(document.querySelector('#selectYear').value); 
     const selectedMonthValue = parseInt(document.querySelector('#selectMonth').value) - 1;
     createFrame(selectedYearValue, selectedMonthValue, MemberNum);
+}
+
+function openTextEdit() {
+    window.open('./text_edit.html', 'text_edit_window', 'width = 500 height = 500 top =100  left = 200');
 }
