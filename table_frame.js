@@ -106,11 +106,20 @@ function createFrame(year, month, memberNum) {
         for(let j=0; j<memberNum; j++) {
             const tableDataElement = document.createElement('td');
             const tableData = tableRow.appendChild(tableDataElement);
-            tableData.textContent = `${i+1}-${j+1}`;
             tableData.id = `datumMember${j}Date${year}${month+1}${i+1}`;
+            const tableCell = document.createElement('div');
+            tableCell.className = 'schedule-table-cell-div';
+            tableDataElement.appendChild(tableCell);
+            const textDivision = document.createElement('div');
+            tableCell.appendChild(textDivision);
+            textDivision.className = 'schedule-text-div';
+            textDivision.textContent = `${j+1}-${i+1}`;
+            const editButtonDivision = document.createElement('div');
+            editButtonDivision.className = 'text-edit-button-div';
+            tableCell.appendChild(editButtonDivision);
             const editButton = document.createElement('button');
             editButton.textContent = '編集';
-            tableData.appendChild(editButton);
+            editButtonDivision.appendChild(editButton);
         }
     }
 
@@ -130,5 +139,5 @@ function submitYearMonth() {
 }
 
 function openTextEdit() {
-    window.open('./text_edit.html', 'text_edit_window', 'width = 500 height = 500 top =100  left = 200');
+    window.open('./text_edit.html', 'text_edit_window', 'width = 400 height = 250 top =100  left = 200');
 }
